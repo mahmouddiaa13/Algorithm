@@ -1,4 +1,7 @@
-def merge_sort(arr):
+from typing import List
+def merge_sort(arr: List[int]) -> List[int]:
+    """ f(n) = O(nlog(n)) as n-> infinity """
+
     if len(arr) > 1:
         mid = len(arr) // 2
 
@@ -9,7 +12,6 @@ def merge_sort(arr):
         merge_sort(right_arr)
 
         i = j = k =0
-
         while(i < len(left_arr) and j < len(right_arr)):
             if left_arr[i] < right_arr[j]:
                 arr[k] = left_arr[i]
@@ -21,9 +23,9 @@ def merge_sort(arr):
                 j += 1
 
         while i < len(left_arr):
-                arr[k] = left_arr[i]
-                i += 1
-                k += 1
+            arr[k] = left_arr[i]
+            i += 1
+            k += 1
 
         while j < len(right_arr):
             arr[k] = right_arr[j]
