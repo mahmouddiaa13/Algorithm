@@ -1,5 +1,5 @@
 from typing import List
-def merge_sort(arr: List[int]) -> List[int]:
+def merge_sort(arr: List[int]) -> None:
     """ f(n) = O(nlog(n)) as n-> infinity """
 
     if len(arr) > 1:
